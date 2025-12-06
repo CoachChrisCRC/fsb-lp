@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITTER, STRONGER, BETTER Program</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using Inter font stack (default in Tailwind) for modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            /* CRITICAL FIX: Ensures no horizontal scrolling or text overflow */
+            overflow-x: hidden; 
+            /* Ensures anchor links scroll below the sticky header */
+            scroll-padding-top: 5rem; 
+        }
+        /* Custom styles for the high-impact CTA button (Final Sign Up Block) */
+        .cta-button {
+            transition: all 0.3s ease-in-out;
+            border: 3px solid #000;
+            background-color: #fff;
+            color: #000;
+            box-shadow: 6px 6px 0 0 #000; /* Dramatic offset shadow */
+        }
+        .cta-button:hover {
+            box-shadow: 2px 2px 0 0 #000;
+            transform: translate(4px, 4px); /* Shift to simulate button press */
+        }
+        /* Style for mid-page CTA button */
+        .mid-cta-button {
+            border: 2px solid #000;
+            background-color: #f3f4f6;
+            color: #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+        .mid-cta-button:hover {
+            background-color: #fff;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        /* Asymmetrical header style for the main branding section */
+        .section-header-box {
+            border-bottom: 2px solid;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        /* Style for the header sign-up button */
+        .header-signup-btn {
+            border: 2px solid #fff; /* White border for contrast */
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+            transition: all 0.2s;
+        }
+        .header-signup-btn:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+
+    <!-- Header & Navigation (Sticky, Monochromatic Branding) -->
+    <header class="sticky top-0 z-10 bg-black/95 backdrop-blur-sm p-4 border-b border-white/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- BRANDING BLOCK - Now prominently featuring "FITTER STRONGER BETTER" -->
+            <div class="text-left leading-none">
+                <div class="text-xl sm:text-2xl font-black uppercase leading-tight text-white">
+                    FITTER STRONGER BETTER
+                </div>
+                <div class="text-xs sm:text-sm font-bold uppercase text-neutral-400 leading-tight mt-1">
+                    COACH CHRIS | CIRCULAR ROOTS COACHING
+                </div>
+                <div class="text-xs font-semibold uppercase text-neutral-600 leading-tight">
+                    TRAIN UNCNVNTNL
+                </div>
+            </div>
+            <!-- SIGN UP BUTTON 1 (Scrolls to final CTA) -->
+            <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold bg-white text-black rounded-lg">
+                CLAIM YOUR SPOT
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section: Focused Text Block -->
+    <section class="min-h-[70vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 bg-black text-white">
+        <div class="max-w-6xl mx-auto w-full">
+            <h1 class="text-6xl sm:text-7xl md:text-7xl font-black leading-none mb-10 uppercase max-w-4xl">
+                The 5 Biggest Obstacles Keeping You From Results.
+            </h1>
+            <!-- Remaining text block is now full width for better flow. -->
+            <p class="text-xl sm:text-2xl font-light italic mt-4 max-w-4xl">
+                If you've ever felt frustrated, stuck, or overwhelmed by your fitness journey, you are not alone. Most people struggle not because of a lack of effort, but because of a lack of structure, support, and clarity.
+            </p>
+        </div>
+    </section>
+    
+    <main>
+        <!-- PREMISE SECTION (White Background) -->
+        <section class="bg-white text-black py-20 px-4 sm:px-6 border-y border-black">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6">
+                    How the FITTER STRONGER BETTER Program Solves Them All.
+                </h2>
+                <p class="text-2xl font-light italic mb-8 max-w-5xl">
+                    The "Fitter Stronger Better Program" is engineered to eliminate the five biggest barriers to your success, providing a complete, personalized roadmap to achieving and sustaining your best self.
+                </p>
+                <!-- CTA Button 2 - SIGN UP TODAY -->
+                <div class="text-center mt-12">
+                    <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
+                        SIGN UP TODAY
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OBSTACLE 1: CONSISTENCY & MOTIVATION (Black Background) -->
+        <section class="bg-black text-white py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                    1. 📉 THE CONSISTENCY & MOTIVATION TRAP: WE BUILD HABITS, NOT HYPE.
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                    <!-- STRUGGLE -->
+                    <div class="md:col-span-2">
+                        <h3 class="font-light text-2xl mb-4 italic text-neutral-400">YOUR STRUGGLE:</h3>
+                        <p class="text-xl font-bold">You start strong, but the motivation fades. A setback (holiday, illness) derails your progress, and getting back on track feels impossible.</p>
+                    </div>
+
+                    <!-- SINGLE SOLUTION BLOCK -->
+                    <div class="md:col-span-2">
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">The Solution</h3>
+                        <p class="text-lg">The solution focuses on instant support and accountability. Through <span class="font-bold italic">Dedicated App Access</span>, your simple-to-follow plan eliminates decision fatigue. You also receive personalized, proactive support via <span class="font-bold italic">Supportive Community & Weekly Guidance</span>, ensuring your coach helps you navigate setbacks and build the long-term habits necessary for consistent adherence.</p>
+                    </div>
+                    <!-- END SINGLE SOLUTION BLOCK -->
+                </div>
+            </div>
+        </section>
+
+        <!-- OBSTACLE 2: TIME MANAGEMENT & OVERWHELM (White Background) -->
+        <section class="bg-white text-black py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                    2. 🕰️ TIME MANAGEMENT & OVERWHELM: GET MORE FROM LESS TIME.
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                    <!-- STRUGGLE -->
+                    <div class="md:col-span-2">
+                        <h3 class="font-light text-2xl mb-4 italic text-neutral-600">YOUR STRUGGLE:</h3>
+                        <p class="text-xl font-bold">You're busy. Fitness feels like a huge, time-consuming obligation—from long workouts to endless meal prep—leading to burnout.</p>
+                    </div>
+
+                    <!-- SINGLE SOLUTION BLOCK -->
+                    <div class="md:col-span-2">
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">The Solution</h3>
+                        <p class="text-lg">We combat time drain with efficiency. Our <span class="font-bold italic">Optimized Workout Structure</span> is expertly structured to deliver maximum results in minimal time, ensuring every movement counts. Furthermore, <span class="font-bold italic">Customisable Nutrition</span> guidelines simplify meal prep and eating, removing the stress of perfect dieting and teaching you how to integrate healthy food habits into your busy life.</p>
+                    </div>
+                    <!-- END SINGLE SOLUTION BLOCK -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- OBSTACLE 3: CONFUSION & LACK OF DIRECTION (Black Background) -->
+        <section class="bg-black text-white py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                    3. 🤔 CONFUSION & LACK OF DIRECTION: CLARITY DRIVES RESULTS.
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                    <!-- STRUGGLE -->
+                    <div class="md:col-span-2">
+                        <h3 class="font-light text-2xl mb-4 italic text-neutral-400">YOUR STRUGGLE:</h3>
+                        <p class="text-xl font-bold">You're drowning in conflicting advice. You're unsure if you're doing the right things for your specific goals.</p>
+                    </div>
+
+                    <!-- SINGLE SOLUTION BLOCK -->
+                    <div class="md:col-span-2">
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">The Solution</h3>
+                        <p class="text-lg">We provide a clear roadmap with <span class="font-bold italic">Scientifically-Backed Programming</span>, which features a precise, progressive blend of Strength, Strength Endurance, and Conditioning. This removes all guesswork. To ensure continuous progress, <span class="font-bold italic">Expert Check-ins</span> provide Monthly Individual reviews, allowing your coach to swiftly identify and solve plateaus by dynamically adjusting your plan.</p>
+                    </div>
+                    <!-- END SINGLE SOLUTION BLOCK -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Button 3 (Scrolls to final CTA) - GET INVOLVED -->
+        <section class="bg-white text-black py-12 px-4 sm:px-6 text-center border-t border-black">
+            <h4 class="text-xl font-bold mb-4 uppercase">Stop Guessing. Start Achieving.</h4>
+            <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
+                GET INVOLVED
+            </a>
+        </section>
+
+        <!-- OBSTACLE 4 & 5: NUTRITION & RESULTS (White Background) -->
+        <section class="bg-white text-black py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                    4. 🍎 NUTRITION & DIET ADHERENCE: MAKE FOOD YOUR ALLY.
+                </h2>
+                <!-- OBSTACLE 4 CONTENT -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mb-16">
+                    <div class="md:col-span-2">
+                        <h3 class="font-light text-2xl mb-4 italic text-neutral-600">YOUR STRUGGLE:</h3>
+                        <p class="text-xl font-bold">You battle cravings, social pressure, and a lack of knowledge on how to structure meals for muscle growth or fat loss. Diets feel unsustainable.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">The Solution</h3>
+                        <p class="text-lg">Our solution provides sustainable adherence, not temporary restriction. You receive <span class="font-bold italic">Customisable Nutritional Guidelines</span> with clear Calorie & Macro Goals. We teach you how to structure your meals for optimal energy and performance, ensuring your eating habits are easy to incorporate into your social life and family schedule.</p>
+                    </div>
+                </div>
+                
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 mt-16 max-w-4xl">
+                    5. 🧘 LACK OF VISIBLE/QUICK RESULTS: FOCUS ON HOLISTIC PROGRESS.
+                </h2>
+                <!-- OBSTACLE 5 CONTENT -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                    <div class="md:col-span-2">
+                        <h3 class="font-light text-2xl mb-4 italic text-neutral-600">YOUR STRUGGLE:</h3>
+                        <p class="text-xl font-bold">You put in the effort but don't see the scale move quickly enough, leading to frustration and quitting. You don't know how to break through a plateau.</p>
+                    </div>
+                    
+                    <!-- SINGLE SOLUTION BLOCK -->
+                    <div class="md:col-span-2">
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">The Solution</h3>
+                        <p class="text-lg">We move beyond the scale with <span class="font-bold italic">Personalized Progress Assessment</span>. Monthly Individual Check-ins evaluate success through holistic markers: strength gains, energy levels, and body composition. This assessment fuels <span class="font-bold italic">Dynamic Plan Adjustments</span>: when progress slows, your coach immediately intervenes, ensuring continuous forward momentum and guaranteeing your effort translates into results.</p>
+                    </div>
+                    <!-- END SINGLE SOLUTION BLOCK -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Final CTA & Sign Up (Isolated Box) -->
+        <section id="signup" class="bg-black text-white py-20 px-4 sm:px-6">
+            <div class="max-w-4xl mx-auto text-center pt-16 pb-16 px-8 bg-neutral-900 border-8 border-white rounded-2xl shadow-2xl">
+                <!-- NEW CTA TEXT -->
+                <p class="text-3xl sm:text-4xl font-black mb-6 uppercase">
+                    Ready to stop trading effort for zero results?
+                </p>
+                <p class="text-xl italic mb-10 font-light">
+                    Gain the structure, clarity, and support you need to be Fitter, Stronger, Better.
+                </p>
+                <!-- CTA Button 4 (External Link to Tally Form) -->
+                <a href="https://tally.so/r/mVkdWJ" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-xl">
+                    JOIN THE PROGRAM
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Updated with Disclaimer and Dynamic Year -->
+    <footer class="p-10 bg-black text-neutral-400 border-t border-white/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Disclaimer (Updated Wording) -->
+            <p class="text-xs mb-6 leading-relaxed">
+                General Fitness Disclaimer: Always consult your medical professional or doctor before you begin any new fitness regime or make changes to your diet. This site provides general information for educational purposes only and is not intended to diagnose or treat any medical condition. You engage in physical activity at your own risk.
+            </p>
+            
+            <!-- Copyright (Dynamic Year) -->
+            <p class="text-sm font-semibold text-white mb-2">
+                &copy; <span id="current-year">2025</span> COACH CHRIS | CIRCULAR ROOTS COACHING | TRAIN UNCNVNTNL. All rights reserved.
+            </p>
+            
+            <!-- Tagline -->
+            <p class="text-sm font-medium">
+                Fitter. Stronger. Better.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic copyright year
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // JavaScript to handle smooth scrolling for all internal anchor links (#signup)
+            document.querySelectorAll('a[href="#signup"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault(); // Stop default link behavior
+
+                    const targetElement = document.getElementById('signup');
+                    if (targetElement) {
+                        // Use scrollIntoView with smooth behavior
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
