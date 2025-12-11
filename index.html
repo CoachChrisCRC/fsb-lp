@@ -17,11 +17,12 @@
             /* Ensures anchor links scroll below the sticky header */
             scroll-padding-top: 5rem; 
         }
-        /* Custom styles for the high-impact CTA button (Final Sign Up Block) */
+        
+        /* Custom styles for the high-impact CTA button (Final Sign Up Block) - MONOCHROMATIC */
         .cta-button {
             transition: all 0.3s ease-in-out;
             border: 3px solid #000;
-            background-color: #fff;
+            background-color: #fff; 
             color: #000;
             box-shadow: 6px 6px 0 0 #000; /* Dramatic offset shadow */
         }
@@ -29,6 +30,7 @@
             box-shadow: 2px 2px 0 0 #000;
             transform: translate(4px, 4px); /* Shift to simulate button press */
         }
+        
         /* Style for mid-page CTA button */
         .mid-cta-button {
             border: 2px solid #000;
@@ -42,21 +44,12 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
             transform: translateY(-2px);
         }
+        
         /* Asymmetrical header style for the main branding section */
         .section-header-box {
             border-bottom: 2px solid;
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
-        }
-        /* Style for the header sign-up button */
-        .header-signup-btn {
-            border: 2px solid #fff; /* White border for contrast */
-            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
-            transition: all 0.2s;
-        }
-        .header-signup-btn:hover {
-            background-color: #f3f4f6;
-            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -65,7 +58,7 @@
     <!-- Header & Navigation (Sticky, Monochromatic Branding) -->
     <header class="sticky top-0 z-10 bg-black/95 backdrop-blur-sm p-4 border-b border-white/20">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- BRANDING BLOCK - Now prominently featuring "FITTER STRONGER BETTER" -->
+            <!-- BRANDING BLOCK -->
             <div class="text-left leading-none">
                 <div class="text-xl sm:text-2xl font-black uppercase leading-tight text-white">
                     FITTER STRONGER BETTER
@@ -77,21 +70,21 @@
                     TRAIN UNCNVNTNL
                 </div>
             </div>
-            <!-- SIGN UP BUTTON 1 (Scrolls to final CTA) -->
-            <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold bg-white text-black rounded-lg">
+            <!-- SIGN UP BUTTON 1 (Scrolls to final CTA) - Updated to forest green-700 background -->
+            <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold bg-green-700 text-white rounded-lg hover:bg-green-600 transition duration-150">
                 CLAIM YOUR SPOT
             </a>
         </div>
     </header>
 
-    <!-- Hero Section: Focused Text Block (Font sizes adjusted) -->
+    <!-- Hero Section: Focused Text Block -->
     <section class="min-h-[70vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 bg-black text-white">
         <div class="max-w-6xl mx-auto w-full">
-            <!-- Headline font size remains the same (text-5xl sm:text-6xl md:text-6xl) -->
+            <!-- Headline with forest green-700 highlight -->
             <h1 class="text-5xl sm:text-6xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-4xl">
-                Unlocking the 5 Key Obstacles to Your Fitness Success.
+                Unlocking the <span class="text-green-700">5 Key Obstacles</span> to Your Fitness Success.
             </h1>
-            <!-- PARAGRAPH FONT SIZE REVERTED: text-lg sm:text-xl -> text-xl sm:text-2xl -->
+            <!-- Paragraph text large size -->
             <p class="text-xl sm:text-2xl font-light italic mt-4 max-w-4xl">
                 If you've felt frustrated, stuck, or overwhelmed on your fitness journey, you are not alone. The struggle often comes not from a lack of effort, but from missing the right structure, consistent support, and clear direction. We are here to provide the solution.
             </p>
@@ -102,14 +95,15 @@
         <!-- PREMISE SECTION (White Background - Supportive/Assertive Intro) -->
         <section class="bg-white text-black py-20 px-4 sm:px-6 border-y border-black">
             <div class="max-w-6xl mx-auto">
+                <!-- Headline with forest green-700 highlight -->
                 <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6">
-                    The FITTER STRONGER BETTER Program is Your Foundation for Change.
+                    The FITTER STRONGER BETTER Program is Your <span class="text-green-700">Foundation for Change</span>.
                 </h2>
                 <!-- Conversational tone shift -->
                 <p class="text-2xl font-light italic mb-8 max-w-5xl">
                     This program is specifically engineered to address and eliminate the five common barriers that hold most people back. It provides a complete, personalized roadmap, allowing you to move past frustration and build your best self, sustainably.
                 </p>
-                <!-- CTA Button 2 - SIGN UP TODAY -->
+                <!-- CTA Button 2 - SIGN UP TODAY (Neutral) -->
                 <div class="text-center mt-12">
                     <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
                         START MY JOURNEY
@@ -122,7 +116,7 @@
         <section class="bg-black text-white py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
                 <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    1. 📉 THE CONSISTENCY & MOTIVATION TRAP: WE BUILD HABITS, NOT HYPE.
+                    1. <span class="text-green-700">📉</span> THE CONSISTENCY & MOTIVATION TRAP: WE BUILD HABITS, NOT HYPE.
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
                     <!-- PROBLEM - Conversational tone -->
@@ -134,7 +128,7 @@
                     <!-- SOLUTION - Assertive/Supportive tone -->
                     <div class="md:col-span-2">
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">OUR LONG-TERM FIX:</h3>
-                        <p class="text-lg">We focus on instant support and <span class="font-bold">clear accountability</span>. Through <span class="font-bold italic">Dedicated App Access</span>, your simple-to-follow plan eliminates decision fatigue. You also receive personalized, proactive support via <span class="font-bold italic">Supportive Community & Weekly Guidance</span>—your coach is in your corner to help you navigate setbacks and build consistent, long-term habits.</p>
+                        <p class="text-lg">We focus on instant support and <span class="font-bold">clear accountability</span>. Through <span class="font-bold italic text-green-700">Dedicated App Access</span>, your simple-to-follow plan eliminates decision fatigue. You also receive personalized, proactive support via <span class="font-bold italic text-green-700">Supportive Community & Weekly Guidance</span>—your coach is in your corner to help you navigate setbacks and build consistent, long-term habits.</p>
                     </div>
                     <!-- END SINGLE SOLUTION BLOCK -->
                 </div>
@@ -145,7 +139,7 @@
         <section class="bg-white text-black py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
                 <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    2. 🕰️ TIME MANAGEMENT & OVERWHELM: GET MORE FROM LESS TIME.
+                    2. <span class="text-green-700">🕰️</span> TIME MANAGEMENT & OVERWHELM: GET MORE FROM LESS TIME.
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
                     <!-- PROBLEM - Conversational tone -->
@@ -157,7 +151,7 @@
                     <!-- SOLUTION - Assertive/Supportive tone -->
                     <div class="md:col-span-2">
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">OUR EFFECTIVE WORKFLOW:</h3>
-                        <p class="text-lg">We maximize your time by prioritizing efficiency. Our <span class="font-bold italic">Optimized Workout Structure</span> is expertly designed to deliver maximum results in minimal time, ensuring every session is productive. Plus, <span class="font-bold italic">Customisable Nutrition</span> guidelines simplify meal prep, removing the stress of 'perfect' dieting and teaching you healthy food habits that fit your <span class="italic">actual</span> busy life.</p>
+                        <p class="text-lg">We maximize your time by prioritizing efficiency. Our <span class="font-bold italic text-green-700">Optimized Workout Structure</span> is expertly designed to deliver maximum results in minimal time, ensuring every session is productive. Plus, <span class="font-bold italic text-green-700">Customisable Nutrition</span> guidelines simplify meal prep, removing the stress of 'perfect' dieting and teaching you healthy food habits that fit your <span class="italic">actual</span> busy life.</p>
                     </div>
                     <!-- END SINGLE SOLUTION BLOCK -->
                 </div>
@@ -168,7 +162,7 @@
         <section class="bg-black text-white py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
                 <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    3. 🤔 CONFUSION & LACK OF DIRECTION: CLARITY DRIVES RESULTS.
+                    3. <span class="text-green-700">🤔</span> CONFUSION & LACK OF DIRECTION: CLARITY DRIVES RESULTS.
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
                     <!-- PROBLEM - Conversational tone -->
@@ -180,7 +174,7 @@
                     <!-- SOLUTION - Assertive/Supportive tone -->
                     <div class="md:col-span-2">
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">OUR CLARITY ROADMAP:</h3>
-                        <p class="text-lg">We hand you a clear roadmap built on <span class="font-bold italic">Scientifically-Backed Programming</span>. This features a precise, progressive blend of Strength, Endurance, and Conditioning, removing all guesswork. To ensure <span class="italic">continuous</span> progress, <span class="font-bold italic">Expert Check-ins</span> provide Monthly Individual reviews, allowing your coach to swiftly identify and solve any plateaus by dynamically adjusting your plan.</p>
+                        <p class="text-lg">We hand you a clear roadmap built on <span class="font-bold italic text-green-700">Scientifically-Backed Programming</span>. This features a precise, progressive blend of Strength, Endurance, and Conditioning, removing all guesswork. To ensure <span class="italic">continuous</span> progress, <span class="font-bold italic text-green-700">Expert Check-ins</span> provide Monthly Individual reviews, allowing your coach to swiftly identify and solve any plateaus by dynamically adjusting your plan.</p>
                     </div>
                     <!-- END SINGLE SOLUTION BLOCK -->
                 </div>
@@ -199,7 +193,7 @@
         <section class="bg-white text-black py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
                 <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    4. 🍎 NUTRITION & DIET ADHERENCE: MAKE FOOD YOUR ALLY.
+                    4. <span class="text-green-700">🍎</span> NUTRITION & DIET ADHERENCE: MAKE FOOD YOUR ALLY.
                 </h2>
                 <!-- OBSTACLE 4 CONTENT -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mb-16">
@@ -209,12 +203,12 @@
                     </div>
                     <div class="md:col-span-2">
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">OUR NO-DIET APPROACH:</h3>
-                        <p class="text-lg">We deliver sustainable adherence, not temporary restriction. You receive <span class="font-bold italic">Customisable Nutritional Guidelines</span> with clear Calorie & Macro Goals. We teach you how to structure your meals for optimal energy and performance, ensuring your eating habits are easy to incorporate into your social life and family schedule—no crash dieting required.</p>
+                        <p class="text-lg">We deliver sustainable adherence, not temporary restriction. You receive <span class="font-bold italic text-green-700">Customisable Nutritional Guidelines</span> with clear Calorie & Macro Goals. We teach you how to structure your meals for optimal energy and performance, ensuring your eating habits are easy to incorporate into your social life and family schedule—no crash dieting required.</p>
                     </div>
                 </div>
                 
                 <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 mt-16 max-w-4xl">
-                    5. 🧘 LACK OF VISIBLE/QUICK RESULTS: FOCUS ON HOLISTIC PROGRESS.
+                    5. <span class="text-green-700">🧘</span> LACK OF VISIBLE/QUICK RESULTS: FOCUS ON HOLISTIC PROGRESS.
                 </h2>
                 <!-- OBSTACLE 5 CONTENT -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
@@ -226,7 +220,7 @@
                     <!-- SINGLE SOLUTION BLOCK -->
                     <div class="md:col-span-2">
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">OUR PROGRESS GUARANTEE:</h3>
-                        <p class="text-lg">We intentionally move beyond the scale with <span class="font-bold italic">Personalized Progress Assessment</span>. Monthly Individual Check-ins evaluate success through holistic markers: strength gains, energy levels, and body composition improvements. This assessment fuels <span class="font-bold italic">Dynamic Plan Adjustments</span>: if progress slows, your coach immediately intervenes, ensuring continuous forward momentum and supporting your effort until it translates into tangible results.</p>
+                        <p class="text-lg">We intentionally move beyond the scale with <span class="font-bold italic text-green-700">Personalized Progress Assessment</span>. Monthly Individual Check-ins evaluate success through holistic markers: strength gains, energy levels, and body composition improvements. This assessment fuels <span class="font-bold italic text-green-700">Dynamic Plan Adjustments</span>: if progress slows, your coach immediately intervenes, ensuring continuous forward momentum and supporting your effort until it translates into tangible results.</p>
                     </div>
                     <!-- END SINGLE SOLUTION BLOCK -->
                 </div>
@@ -234,7 +228,7 @@
         </section>
 
 
-        <!-- Final CTA & Sign Up (Isolated Box - Supportive/Assertive) -->
+        <!-- Final CTA & Sign Up (Isolated Box - MONOCHROMATIC STYLE) -->
         <section id="signup" class="bg-black text-white py-20 px-4 sm:px-6">
             <div class="max-w-4xl mx-auto text-center pt-16 pb-16 px-8 bg-neutral-900 border-8 border-white rounded-2xl shadow-2xl">
                 <!-- NEW CTA TEXT -->
@@ -244,7 +238,7 @@
                 <p class="text-xl italic mb-10 font-light">
                     Gain the tailored structure, clarity, and dedicated support necessary to become Fitter, Stronger, and Better, starting today.
                 </p>
-                <!-- CTA Button 4 (External Link to Tally Form) -->
+                <!-- CTA Button 4 (External Link to Tally Form) - Uses the custom CSS which defaults to white/black -->
                 <a href="https://tally.so/r/mVkdWJ" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-xl">
                     JOIN THE PROGRAM
                 </a>
