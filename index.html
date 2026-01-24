@@ -13,57 +13,50 @@
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
             overflow-x: hidden; 
-            scroll-padding-top: 5rem;
-            /* Gradient background to make glass pop */
-            background: radial-gradient(circle at top left, #1a1a1a, #000000);
+            scroll-padding-top: 6rem;
+            background: #000;
             background-attachment: fixed;
+            width: 100%;
         }
 
-        /* Glassmorphism Utility Classes */
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            border-radius: 1.5rem;
         }
 
         .glass-card-light {
             background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(16px) saturate(160%);
+            -webkit-backdrop-filter: blur(16px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 2rem;
         }
 
-        /* Re-styling high-impact CTA for glass context */
-        .cta-button {
+        .squircle-btn {
+            border-radius: 0.75rem; 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background: #fff; 
-            color: #000;
             position: relative;
             overflow: hidden;
         }
-        .cta-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.2);
-        }
-        
-        .mid-cta-button {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #fff;
-            transition: all 0.3s;
-        }
-        .mid-cta-button:hover {
-            background: #fff;
+
+        .cta-button {
+            background: #fff; 
             color: #000;
         }
-
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+        }
+        
         .mid-cta-button-dark {
             background: rgba(0, 0, 0, 0.05);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             color: #000;
             transition: all 0.3s;
         }
@@ -73,21 +66,27 @@
         }
 
         @keyframes pulse-arrow {
-            0%, 100% { transform: translateY(0); opacity: 0.6; }
-            50% { transform: translateY(-10px); opacity: 1; }
+            0%, 100% { transform: translateY(0); opacity: 0.4; }
+            50% { transform: translateY(-8px); opacity: 0.8; }
         }
         .animate-arrow {
-            animation: pulse-arrow 2s infinite ease-in-out;
+            animation: pulse-arrow 3s infinite ease-in-out;
         }
 
-        /* Subtle mesh gradients for background depth */
         .bg-mesh {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
             background-image: 
-                radial-gradient(at 0% 0%, hsla(142, 69%, 28%, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, hsla(0, 0%, 20%, 0.3) 0px, transparent 50%);
+                radial-gradient(at 10% 10%, hsla(142, 69%, 28%, 0.12) 0px, transparent 50%),
+                radial-gradient(at 90% 90%, hsla(142, 60%, 15%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, hsla(0, 0%, 10%, 1) 0px, transparent 100%);
+        }
+
+        h1, h2, h3, p {
+            overflow-wrap: normal;
+            word-wrap: normal;
+            hyphens: none;
         }
     </style>
 </head>
@@ -95,25 +94,24 @@
     <div class="bg-mesh"></div>
 
     <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/10 p-4">
+    <header class="sticky top-0 z-50 bg-black/40 backdrop-blur-3xl border-b border-white/10 py-4 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-left leading-none">
-                <div class="text-xl sm:text-2xl font-black uppercase leading-tight text-white tracking-tighter">
+            <div class="text-left flex flex-col justify-center">
+                <div class="text-xl sm:text-2xl font-black uppercase leading-none text-white tracking-tighter mb-1.5">
                     FITTER STRONGER BETTER
                 </div>
-                <div class="text-xs sm:text-sm font-bold uppercase text-neutral-400 leading-tight mt-1">
-                    COACH CHRIS | CIRCULAR ROOTS COACHING
-                </div>
-                <div class="text-xs font-semibold uppercase text-neutral-600 leading-tight">
-                    TRAIN UNCNVNTNL
+                <div class="flex flex-col space-y-0.5">
+                    <span class="text-[9px] sm:text-[11px] font-bold uppercase text-neutral-300 tracking-wide leading-tight">COACH CHRIS</span>
+                    <span class="text-[9px] sm:text-[11px] font-bold uppercase text-neutral-400 tracking-wide leading-tight">CIRCULAR ROOTS COACHING</span>
+                    <span class="text-[9px] sm:text-[11px] font-bold uppercase text-neutral-500 tracking-wide leading-tight">TRAIN UNCNVNTNL</span>
                 </div>
             </div>
             
-            <div class="flex flex-col space-y-2">
-                <a href="#signup" class="w-32 text-center px-4 py-2 text-xs uppercase font-extrabold bg-green-700 text-white rounded-lg hover:bg-green-600 transition shadow-lg shadow-green-900/20">
-                    CLAIM YOUR SPOT
+            <div class="flex flex-col space-y-2 shrink-0 ml-4">
+                <a href="#signup" class="squircle-btn w-28 sm:w-36 text-center px-2 sm:px-4 py-2 text-[10px] sm:text-xs uppercase font-black bg-green-800 text-white hover:bg-green-700 transition">
+                    JOIN PROGRAM
                 </a>
-                <a href="#pricing" class="w-32 text-center px-4 py-2 text-xs uppercase font-bold bg-white/10 text-white rounded-lg border border-white/20 hover:bg-white/20 transition backdrop-blur-md">
+                <a href="#pricing" class="squircle-btn w-28 sm:w-36 text-center px-2 sm:px-4 py-2 text-[10px] sm:text-xs uppercase font-black bg-white/5 text-white border border-white/10 hover:bg-white/10 transition backdrop-blur-md">
                     VIEW PRICING
                 </a>
             </div>
@@ -121,193 +119,160 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="min-h-[85vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 relative overflow-hidden">
-        <div class="max-w-6xl mx-auto w-full z-10">
-            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-10 uppercase max-w-4xl drop-shadow-2xl">
-                Unlocking the <span class="text-green-700">5 Key Obstacles</span> to Your Fitness Success.
+    <section class="min-h-[70vh] flex flex-col items-start justify-center px-4 sm:px-6 py-12 sm:py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full z-10">
+            <h1 class="text-5xl sm:text-7xl md:text-8xl font-black leading-[1] mb-8 uppercase max-w-5xl text-neutral-100">
+                Ready to move <span class="text-green-700">beyond</span> the basics?
             </h1>
-            <p class="text-xl sm:text-2xl font-light italic mt-4 max-w-4xl text-neutral-300">
-                If you've felt frustrated, stuck, or overwhelmed on your fitness journey, you are not alone. The struggle often comes not from a lack of effort, but from missing the right structure, consistent support, and clear direction. We are here to provide the solution.
+            <p class="text-lg sm:text-2xl font-light italic max-w-3xl text-neutral-300 leading-relaxed">
+                Whether you've just finished the 6-week foundations or you're just looking for a step up from "winging it," this is where we bridge the gap. No fluff, just sustainable progress and the support you need to make it stick.
             </p>
         </div>
     </section>
     
     <main>
-        <!-- PREMISE SECTION (Light Glass) -->
-        <section class="py-20 px-4 sm:px-6 relative">
-            <div class="max-w-6xl mx-auto glass-card-light p-10 rounded-3xl text-black">
-                <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6">
-                    The FITTER STRONGER BETTER Program is Your <span class="text-green-700">Foundation for Change</span>.
+        <!-- PREMISE SECTION -->
+        <section class="pb-16 sm:pb-24 px-4 sm:px-6 relative">
+            <div class="max-w-7xl mx-auto glass-card-light p-10 sm:p-24 text-black text-center sm:text-left">
+                <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tighter max-w-4xl mb-8 text-green-800 leading-tight">
+                    The "Goldilocks" of Coaching.
                 </h2>
-                <p class="text-2xl font-light italic mb-8 max-w-5xl text-neutral-800">
-                    This program is specifically engineered to address and eliminate the five common barriers that hold most people back. It provides a complete, personalized roadmap, allowing you to move past frustration and build your best self, sustainably.
+                <p class="text-xl sm:text-2xl font-light italic mb-10 max-w-4xl text-neutral-700 leading-relaxed">
+                    Generic PDFs leave you guessing, but not everyone needs the intensive daily requirements of a full 1-on-1 setup. This is for the person in the middle—you want professional structure, a real human to check in with, and a plan that actually fits your life.
                 </p>
-                <div class="text-center mt-12">
-                    <a href="#signup" class="mid-cta-button-dark inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-xl">
-                        START MY JOURNEY
+                <div class="text-center sm:text-left mt-10">
+                    <a href="#signup" class="squircle-btn mid-cta-button-dark inline-block px-10 sm:px-14 py-4 font-black text-base sm:text-xl uppercase">
+                        LET'S GET STARTED
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- OBSTACLE 1 -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto glass-card p-12 rounded-3xl">
-                <h2 class="border-b border-white/20 pb-4 text-4xl font-extrabold uppercase mb-12 max-w-4xl">
-                    1. <span class="text-green-700">📉</span> THE CONSISTENCY & MOTIVATION TRAP: WE <span class="text-green-700">BUILD HABITS, NOT HYPE</span>.
+        <!-- PILLAR 1: CONSISTENCY -->
+        <section class="py-12 sm:py-20 px-4 sm:px-6">
+            <div class="max-w-7xl mx-auto glass-card p-10 sm:p-24">
+                <h2 class="border-b border-white/10 pb-6 text-2xl sm:text-4xl font-black uppercase mb-12 max-w-5xl flex items-center gap-6">
+                    <span class="text-green-800 text-3xl sm:text-5xl">🧱</span> The Long-Game Mindset
                 </h2>
-                <div class="space-y-10">
+                <div class="space-y-12 max-w-4xl">
                     <div>
-                        <h3 class="font-light text-2xl mb-4 italic text-neutral-400">THE ADHERENCE BREAKDOWN:</h3>
-                        <p class="text-xl font-bold">You know the feeling: you start strong, but the initial motivation <span class="italic">always</span> fades. A setback (a holiday, a busy week) totally derails your progress, and getting back into the rhythm feels impossible.</p>
+                        <h3 class="font-light text-xl sm:text-2xl mb-4 italic text-neutral-400">THE SHIFT:</h3>
+                        <p class="text-lg sm:text-2xl font-semibold text-neutral-200 leading-relaxed">Six-week "challenges" are great for a quick hit, but they don't teach you how to actually live your life. This program is for the long haul.</p>
                     </div>
                     <div>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">OUR LONG-TERM FIX:</h3>
-                        <p class="text-lg text-neutral-300">We focus on instant support and <span class="font-bold text-white">clear accountability</span>. Through <span class="font-bold italic text-white">Dedicated App Access</span>, your simple-to-follow plan eliminates decision fatigue. You also receive personalized, proactive support via <span class="font-bold italic text-white">Supportive Community & Weekly Guidance</span>—your coach is in your corner to help you navigate setbacks and build consistent, long-term habits.</p>
+                        <h3 class="font-black text-lg sm:text-xl uppercase mb-4 border-b border-white/10 pb-1 text-neutral-400">BEYOND THE COUNTDOWN:</h3>
+                        <p class="text-base sm:text-xl text-neutral-300 leading-relaxed">Through our <span class="font-bold text-white">Dedicated Coaching App</span>, we celebrate the wins and troubleshoot the bad days together. You aren't training in a vacuum anymore; you're part of a collective moving toward a better standard—and once that standard is set, we can start making your training truly efficient.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- OBSTACLE 2 (Light Glass) -->
-        <section class="py-12 px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto glass-card-light p-12 rounded-3xl text-black">
-                <h2 class="border-b border-black/10 pb-4 text-4xl font-extrabold uppercase mb-12 max-w-4xl">
-                    2. <span class="text-green-700">🕰️</span> TIME MANAGEMENT & OVERWHELM: <span class="text-green-700">GET MORE FROM LESS TIME</span>.
+        <!-- PILLAR 2: EFFICIENCY -->
+        <section class="py-10 sm:py-16 px-4 sm:px-6">
+            <div class="max-w-7xl mx-auto glass-card-light p-10 sm:p-24 text-black">
+                <h2 class="border-b border-black/5 pb-6 text-2xl sm:text-4xl font-black uppercase mb-12 max-w-5xl flex items-center gap-6">
+                    <span class="text-green-800 text-3xl sm:text-5xl">⚡</span> Efficient High-Performance
                 </h2>
-                <div class="space-y-10">
+                <div class="space-y-12 max-w-4xl">
                     <div>
-                        <h3 class="font-light text-2xl mb-4 italic text-neutral-600">THE TIME SINK TRAP:</h3>
-                        <p class="text-xl font-bold">You’re busy, and fitness constantly feels like a huge, time-consuming obligation. Long workouts and endless meal prep lead to burnout before you even see results.</p>
+                        <h3 class="font-light text-xl sm:text-2xl mb-4 italic text-neutral-500">THE REALITY:</h3>
+                        <p class="text-lg sm:text-2xl font-semibold text-neutral-800 leading-relaxed">Efficiency isn't just about speed; it's about making every minute count so training doesn't overwhelm your life.</p>
                     </div>
                     <div>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black/10 pb-1">OUR EFFECTIVE WORKFLOW:</h3>
-                        <p class="text-lg text-neutral-800">We maximize your time by prioritizing efficiency. Our <span class="font-bold italic">Optimized Workout Structure</span> is expertly designed to deliver maximum results in minimal time, ensuring every session is productive. Plus, <span class="font-bold italic">Customisable Nutrition</span> guidelines simplify meal prep, removing the stress of 'perfect' dieting and teaching you healthy food habits that fit your <span class="italic">actual</span> busy life.</p>
+                        <h3 class="font-black text-lg sm:text-xl uppercase mb-4 border-b border-black/5 pb-1 text-neutral-600">SMART WORKOUTS:</h3>
+                        <p class="text-base sm:text-xl text-neutral-700 leading-relaxed">Because we focus on high-impact movements, you're doing battle-tested sessions that get results without keeping you in the gym for two hours. By streamlining your effort, we create the room your body needs to actually adapt and grow.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- OBSTACLE 3 -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto glass-card p-12 rounded-3xl">
-                <h2 class="border-b border-white/20 pb-4 text-4xl font-extrabold uppercase mb-12 max-w-4xl">
-                    3. <span class="text-green-700">🤔</span> CONFUSION & LACK OF DIRECTION: <span class="text-green-700">CLARITY DRIVES RESULTS</span>.
+        <!-- PILLAR 3: ADAPTATION -->
+        <section class="py-12 sm:py-20 px-4 sm:px-6">
+            <div class="max-w-7xl mx-auto glass-card p-10 sm:p-24">
+                <h2 class="border-b border-white/10 pb-6 text-2xl sm:text-4xl font-black uppercase mb-12 max-w-5xl flex items-center gap-6">
+                    <span class="text-green-800 text-3xl sm:text-5xl">🎯</span> Dynamic Growth
                 </h2>
-                <div class="space-y-10">
+                <div class="space-y-12 max-w-4xl">
                     <div>
-                        <h3 class="font-light text-2xl mb-4 italic text-neutral-400">THE INFORMATION OVERLOAD:</h3>
-                        <p class="text-xl font-bold">You’re drowning in conflicting advice from social media and magazines. You’re left constantly unsure if you’re even doing the right things for <span class="italic">your</span> specific body and goals.</p>
+                        <h3 class="font-light text-xl sm:text-2xl mb-4 italic text-neutral-400">THE EVOLUTION:</h3>
+                        <p class="text-lg sm:text-2xl font-semibold text-neutral-200 leading-relaxed">Efficiency opens the door for real growth, but only if the plan evolves as quickly as you do.</p>
                     </div>
                     <div>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">OUR CLARITY ROADMAP:</h3>
-                        <p class="text-lg text-neutral-300">We hand you a clear roadmap built on <span class="font-bold italic text-white">Scientifically-Backed Programming</span>. This features a precise, progressive blend of Strength, Endurance, and Conditioning, removing all guesswork. To ensure <span class="italic text-white">continuous</span> progress, <span class="font-bold italic text-white">Expert Check-ins</span> provide Monthly Individual reviews, allowing your coach to swiftly identify and solve any plateaus by dynamically adjusting your plan.</p>
+                        <h3 class="font-black text-lg sm:text-xl uppercase mb-4 border-b border-white/10 pb-1 text-neutral-400">MONTHLY ADAPTATIONS:</h3>
+                        <p class="text-base sm:text-xl text-neutral-300 leading-relaxed">This is a living, breathing program. We adapt your phases every month to keep your body guessing and your mind engaged. This constant evolution is exactly what makes the nutrition and accountability pillars so effective—you're always moving forward.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Intermediate CTA -->
-        <section class="py-12 px-4 sm:px-6 text-center">
-            <div class="max-w-4xl mx-auto glass-card p-8 rounded-2xl border-white/5">
-                <h4 class="text-xl font-bold mb-6 uppercase tracking-widest">Stop Guessing. Discover the Power of a Proven Plan.</h4>
-                <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-xl">
-                    EXPLORE THE PROGRAM
-                </a>
-            </div>
-        </section>
-
-        <!-- OBSTACLE 4 & 5 (Light Glass) -->
-        <section class="py-12 px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto glass-card-light p-12 rounded-3xl text-black">
-                <!-- OBSTACLE 4 -->
-                <h2 class="border-b border-black/10 pb-4 text-4xl font-extrabold uppercase mb-12 max-w-4xl">
-                    4. <span class="text-green-700">🍎</span> NUTRITION & DIET ADHERENCE: <span class="text-green-700">MAKE FOOD YOUR ALLY</span>.
-                </h2>
-                <div class="space-y-10 mb-20">
+        <!-- PILLAR 4 & 5 (Combined) -->
+        <section class="py-10 sm:py-16 px-4 sm:px-6">
+            <div class="max-w-7xl mx-auto glass-card-light p-10 sm:p-24 text-black">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 sm:gap-32">
                     <div>
-                        <h3 class="font-light text-2xl mb-4 italic text-neutral-600">THE SUSTAINABILITY CHALLENGE:</h3>
-                        <p class="text-xl font-bold">You constantly battle cravings, social pressure, and lack the knowledge on how to structure meals for muscle growth or fat loss. This is why every diet you try feels completely unsustainable.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black/10 pb-1">OUR NO-DIET APPROACH:</h3>
-                        <p class="text-lg text-neutral-800">We deliver sustainable adherence, not temporary restriction. You receive <span class="font-bold italic">Customisable Nutritional Guidelines</span> with clear Calorie & Macro Goals. We teach you how to structure your meals for optimal energy and performance, ensuring your eating habits are easy to incorporate into your social life and family schedule—no crash dieting required.</p>
-                    </div>
-                </div>
-                
-                <!-- OBSTACLE 5 -->
-                <h2 class="border-b border-black/10 pb-4 text-4xl font-extrabold uppercase mb-12 max-w-4xl">
-                    5. <span class="text-green-700">🧘</span> LACK OF VISIBLE/QUICK RESULTS: <span class="text-green-700">FOCUS ON HOLISTIC PROGRESS</span>.
-                </h2>
-                <div class="space-y-10">
-                    <div>
-                        <h3 class="font-light text-2xl mb-4 italic text-neutral-600">THE PLATEAU FRUSTRATION:</h3>
-                        <p class="text-xl font-bold">You put in the effort but don't see the scale move quickly enough, which leads straight to frustration and quitting. Worse, you don't know how to break through a plateau when it hits.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black/10 pb-1">OUR PROGRESS GUARANTEE:</h3>
-                        <p class="text-lg text-neutral-800">We intentionally move beyond the scale with <span class="font-bold italic">Personalized Progress Assessment</span>. Monthly Individual Check-ins evaluate success through holistic markers: strength gains, energy levels, and body composition improvements. This assessment fuels <span class="font-bold italic">Dynamic Plan Adjustments</span>: if progress slows, your coach immediately intervenes, ensuring continuous forward momentum and supporting your effort until it translates into tangible results.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRICING & RECAP (Dark Glass) -->
-        <section id="pricing" class="py-24 px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto glass-card p-12 rounded-3xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-green-700/10 blur-[100px] -z-10"></div>
-                <h2 class="text-4xl font-black uppercase tracking-tighter mb-16 text-center">
-                    <span class="text-green-700">Program Cost</span> & Final Recap
-                </h2>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-                    <!-- Pricing Card -->
-                    <div class="lg:col-span-1 text-center bg-white/5 border-2 border-green-700 p-8 rounded-2xl shadow-2xl backdrop-blur-2xl">
-                        <p class="text-xl font-bold uppercase mb-4 text-green-700">Cost Today:</p>
-                        <div class="text-5xl font-extrabold mb-2 text-white">
-                            £50<span class="text-2xl font-light text-neutral-400">/month</span>
+                        <h2 class="border-b border-black/5 pb-6 text-2xl sm:text-3xl font-black uppercase mb-10 flex items-center gap-5">
+                            <span class="text-green-800 text-4xl">⚖️</span> Nutrition
+                        </h2>
+                        <div class="space-y-8">
+                            <h3 class="font-light text-xl mb-3 italic text-neutral-500">FUEL FOR GROWTH:</h3>
+                            <p class="text-base sm:text-lg text-neutral-800 leading-relaxed">As your training evolves, your nutrition needs to follow suit without becoming another source of stress. We'll help you break the restriction cycle and use <span class="font-bold italic">habitual anchors</span> to stay on track even when life gets social. It’s about balance, supported by the final piece of the puzzle.</p>
                         </div>
-                        <p class="text-lg font-medium text-neutral-500">
-                            Regular Price: <span class="line-through">£75/month</span>
-                        </p>
-                        <p class="mt-8 text-sm italic text-neutral-500">
-                            Limited-time offer for new members.
-                        </p>
+                    </div>
+                    <div>
+                        <h2 class="border-b border-black/5 pb-6 text-2xl sm:text-3xl font-black uppercase mb-10 flex items-center gap-5">
+                            <span class="text-green-800 text-4xl">🫂</span> Accountability
+                        </h2>
+                        <div class="space-y-8">
+                            <h3 class="font-light text-xl mb-3 italic text-neutral-500">THE GLUE:</h3>
+                            <p class="text-base sm:text-lg text-neutral-800 leading-relaxed">Even the best plan fails without support. I'm monitoring the data, and the community shares the wins. You aren't just a number in a database; you're part of a team where skipping out is much harder when people care. That’s the glue that holds all these pillars together.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING & RECAP -->
+        <section id="pricing" class="py-20 sm:py-32 px-4 sm:px-6">
+            <div class="max-w-7xl mx-auto glass-card p-10 sm:p-24 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-80 h-80 bg-green-900/10 blur-[120px] -z-10"></div>
+                <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tighter mb-16 text-center leading-tight">
+                    Simple Monthly <span class="text-green-800">Membership</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+                    <div class="lg:col-span-1 text-center bg-white/5 border border-white/10 p-12 backdrop-blur-3xl rounded-[1.5rem]">
+                        <p class="text-lg font-bold uppercase mb-4 text-green-700">The Membership:</p>
+                        <div class="text-6xl sm:text-7xl font-black mb-4 text-neutral-100">
+                            £75<span class="text-2xl font-light text-neutral-500">/mo</span>
+                        </div>
+                        <p class="text-xs uppercase font-bold text-neutral-300 tracking-widest mt-4">Professional coaching for less than £3/day</p>
                     </div>
                     
-                    <!-- Recap -->
                     <div class="lg:col-span-2">
-                        <h3 class="font-black text-2xl uppercase mb-6 border-b border-white/10 pb-2">
-                            What You Get: Full Program Benefits
-                        </h3>
-                        <ul class="space-y-4 text-lg font-medium">
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-700 mt-1">▶</span>
-                                <span><span class="text-green-700 font-bold">Consistency & Habits:</span> Dedicated App Access & Supportive Community for long-term adherence.</span>
+                        <ul class="space-y-8 text-base sm:text-xl font-medium text-neutral-300">
+                            <li class="flex items-start gap-6">
+                                <span class="text-green-800 mt-1.5 font-black text-xl">▶</span>
+                                <span><span class="text-white font-black">Professional Programming:</span> New phases every month via our app.</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-700 mt-1">▶</span>
-                                <span><span class="text-green-700 font-bold">Time Efficiency:</span> Optimized Workout Structure to maximize results in minimal time.</span>
+                            <li class="flex items-start gap-6">
+                                <span class="text-green-800 mt-1.5 font-black text-xl">▶</span>
+                                <span><span class="text-white font-black">Real Human Support:</span> Direct coach contact, supportive community chats, and Q&A threads.</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-700 mt-1">▶</span>
-                                <span><span class="text-green-700 font-bold">Clarity & Direction:</span> Scientifically-Backed Programming with Dynamic Plan Adjustments from expert coach check-ins.</span>
+                            <li class="flex items-start gap-6">
+                                <span class="text-green-800 mt-1.5 font-black text-xl">▶</span>
+                                <span><span class="text-white font-black">Habit Mastery:</span> Weekly check-ins to make sure the work actually sticks.</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-700 mt-1">▶</span>
-                                <span><span class="text-green-700 font-bold">Sustainable Nutrition:</span> Customisable Nutritional Guidelines (Macros/Calories) that fit your real life—no crash dieting.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-700 mt-1">▶</span>
-                                <span><span class="text-green-700 font-bold">Progress Guarantee:</span> Holistic, personalized assessment to ensure continuous forward momentum and break plateaus.</span>
+                            <li class="flex items-start gap-6">
+                                <span class="text-green-800 mt-1.5 font-black text-xl">▶</span>
+                                <span><span class="text-white font-black">The Framework:</span> A clear path for nutrition and long-term health.</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="text-center mt-16">
-                    <a href="#signup" class="inline-block p-5 rounded-full border border-white/20 hover:bg-white/10 transition-all group animate-arrow">
-                        <svg class="w-8 h-8 text-white group-hover:text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <a href="#signup" class="inline-block p-6 rounded-full border border-white/10 hover:bg-white/10 transition-all group animate-arrow">
+                        <svg class="w-8 h-8 text-neutral-400 group-hover:text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
                     </a>
@@ -315,33 +280,32 @@
             </div>
         </section>
 
-
         <!-- Final Sign Up -->
-        <section id="signup" class="py-24 px-4 sm:px-6">
-            <div class="max-w-4xl mx-auto text-center p-12 glass-card-light rounded-[3rem] shadow-2xl">
-                <p class="text-3xl sm:text-5xl font-black mb-8 uppercase text-black leading-tight">
-                    Ready to move past frustration and <span class="text-green-700">build lasting results</span>?
+        <section id="signup" class="pb-32 pt-10 px-4 sm:px-6">
+            <div class="max-w-5xl mx-auto text-center p-14 sm:p-24 glass-card-light">
+                <p class="text-4xl sm:text-7xl font-black mb-10 uppercase text-black leading-[1]">
+                    Let's get to <span class="text-green-800">work.</span>
                 </p>
-                <p class="text-xl italic mb-12 font-light text-neutral-800">
-                    Gain the tailored structure, clarity, and dedicated support necessary to become Fitter, Stronger, and Better, starting today.
+                <p class="text-xl sm:text-2xl italic mb-14 font-light text-neutral-700 leading-relaxed max-w-2xl mx-auto">
+                    If you're ready to stop guessing and start building something that lasts—this is for you. No egos, just better results.
                 </p>
-                <a href="https://tally.so/r/mVkdWJ" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-tighter rounded-2xl shadow-xl">
-                    JOIN THE PROGRAM
+                <a href="https://tally.so/r/mVkdWJ" class="squircle-btn cta-button inline-block px-12 sm:px-20 py-6 font-black text-xl sm:text-3xl uppercase tracking-tighter shadow-lg">
+                    JOIN THE TEAM
                 </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="p-12 bg-black/80 backdrop-blur-2xl border-t border-white/10 text-neutral-400">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="text-[10px] sm:text-xs mb-8 leading-relaxed opacity-60">
-                General Fitness Disclaimer: Always consult your medical professional or doctor before you begin any fitness regime or make changes to your diet. This site provides general information for educational purposes only and is not intended to diagnose or treat any medical condition. You engage in physical activity at your own risk.
+    <footer class="p-12 bg-black border-t border-white/10">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-sm mb-10 leading-relaxed text-neutral-300 font-medium max-w-3xl mx-auto bg-white/5 p-6 backdrop-blur-xl border border-white/5 rounded-[1rem]">
+                Friendly reminder: Chat with your doctor before starting anything new. We're here to support you, but we aren't your medical team! Move at your own pace and keep it safe.
             </p>
-            <p class="text-sm font-semibold text-white mb-2">
-                &copy; <span id="current-year">2025</span> COACH CHRIS | CIRCULAR ROOTS COACHING | TRAIN UNCNVNTNL. All rights reserved.
+            <p class="text-sm font-bold text-neutral-200 mb-2">
+                &copy; <span id="current-year">2026</span> COACH CHRIS | CIRCULAR ROOTS COACHING | TRAIN UNCNVNTNL.
             </p>
-            <p class="text-xs font-medium tracking-widest uppercase text-green-700">
+            <p class="text-xs font-black tracking-widest uppercase text-green-700">
                 Fitter. Stronger. Better.
             </p>
         </div>
@@ -368,3 +332,4 @@
     </script>
 </body>
 </html>
+
